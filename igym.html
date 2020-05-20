@@ -24,9 +24,7 @@
   .collapse .row, #courtParams .row{
     margin-bottom:.5em;
     }
-  #gameState{
-    display:none;
-  }
+ 
 </style>
 </head>
 <body>
@@ -43,24 +41,25 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          
-          <div class="modal-body">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" class="form-control">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" class="form-control">
-              <div class="form-check">
-          </div>
+          <form action="">
+            <div class="modal-body">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
+                <div class="form-check">
+            </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Log In</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -82,7 +81,7 @@
       </div>
         <div id="gameState" class="container">
             <div id="gameScore" class="container">
-                <p> something here that pulls in score data from system and outputs it in real time</p>
+                <p> In a future version, something here that pulls in score data from system and outputs it in real time</p>
             </div>
             <div id="timer" class="container">
               <form> 
@@ -92,7 +91,7 @@
               </form>
 
             </div>
-           <div class="container"><p>a countdown timer goes here. It would need to communicate with system as well, so maybe this is two separate uinterface pieces. User shoulld be able to select game length in minutes and submit to system, then see a countdown in real time as the game runs </p></div>
+           <div class="container"><p>In a future version, a countdown timer goes here. It would need to communicate with system as well, so maybe this is two separate uinterface pieces. User shoulld be able to select game length in minutes and submit to system, then see a countdown in real time as the game runs </p></div>
         </div><!--end #gameState-->
       </div>
         <!--tabbed panels-->
