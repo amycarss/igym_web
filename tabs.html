@@ -29,9 +29,9 @@
       </li>
     </ul>
     
-    <div class="tab-content" id="myTabContent">
+    <div class="tab-content" id="myTabContent" role="navigation">
         <div class="tab-pane fade show active" id="player" role="tabpanel" aria-labelledby="player-tab">
-            <div class="accordion" id="playerSettings">
+            <div class="accordion" id="playerSettings" role="navigation">
                 <div class="card">
                   <div class="card-header" id="player1">
                     <h2 class="mb-0">
@@ -43,7 +43,8 @@
                   <div id="collapseOne" class="collapse show" aria-labelledby="Player1" data-parent="#playerSettings">
                     <div class="card-body">
                         <div class="container">
-                          <div class="row">
+                          <form action="" method="get">
+                          <div class="row form-group">
                             <div class="col-3">
                               <label for="player-name-1">Player Name</label>
                             </div>
@@ -52,7 +53,7 @@
                             </div>
                           </div>
 
-                          <div class="row">
+                          <div class="row form-group">
                             <div class="col-5">
                               <label for="circle-size-1">Circle Expansion Size (1-10)</label>
                             </div>
@@ -61,7 +62,7 @@
                             </div>
                           </div>
 
-                          <div class="row">
+                          <div class="row form-group">
                             <div class="col-5">
                               <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
                             </div>
@@ -70,7 +71,7 @@
                             </div>
                           </div>
 
-                          <div class="row">
+                          <div class="row form-group">
                             <div class="col-5">
                               <label for="hold-seconds-1">Hold time (seconds)</label>
                             </div>
@@ -80,17 +81,18 @@
                           </div>
                   
                        
-                        <div class="custom-control custom-switch mb-5">
+                        <div class="custom-control custom-switch mb-5 form-group">
                           <input type="checkbox" class="custom-control-input" id="customSwitch1">
                           <label class="custom-control-label" for="customSwitch1">Apply settings to all kick buttons</label>
                         </div>  
-                        <div class="row d-flex justify-content-between">
+                        <div class="row d-flex justify-content-between form-group">
                           <div>
                             <input type="submit" value="Delete" aria-label="delete button">
                           </div>
                           <div>
                             <input type="submit" value="Apply" aria-label="apply button">
                           </div>
+                        </form>
                         </div><!--end container-->
                       </div><!--end player1 params-->
                     </div><!--end.card-body-->
