@@ -31,35 +31,36 @@
   <header>
     <nav class="navbar bg-light flex-md-nowrap pl-10 pr-10 shadow">
       <h1>iGym</h1>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           Login
         </button>
     </nav>        
   </header>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content" role="dialog">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="">
             <div class="modal-body">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" class="form-control">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="form-control">
-                <div class="form-check">
-            </div>
-
+              <form>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control">
+                </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary">Log In</button>
             </div>
+          </form>
           </div>
-        </form>
       </div>
     </div>
   </div>
@@ -67,47 +68,35 @@
     <main class="p-3">
         <div id="gameChoice" class="container">
           <div class="row">
-              <div class="col-sm"><select class="custom-select custom-select-md mb-3">
+            <form>
+              <div class="col-sm">
+                <select class="custom-select custom-select-md mb-3">
                 <option selected>Select Game</option>
                 <option id="soccerHockey">Soccer/Air hockey</option>
                   <option id="pacman">Pac man</option>
                   <option id="soccerPower">Soccer with power-up</option>
                   <option id="euchre">Euchre</option>  
             </select>
+          </div>
+          </form>
             </div>
             <div class="col-sm"><button class="btn btn-secondary">Recapture background</button></div>
         </div>
         <div class="col-lg mb-4"><button class="btn btn-primary">START/STOP</button></div>
-      </div>
-        <div id="gameState" class="container">
-            <div id="gameScore" class="container">
-                <p> In a future version, something here that pulls in score data from system and outputs it in real time</p>
-            </div>
-            <div id="timer" class="container">
-              <form> 
-                <input type="number" id="minutes" name="minutes" step="1"><label for="minutes">Min.</label>
-                <input type="number" id="seconds" name="minutes" step="1">
-                <label for="seconds">Sec.</label><input type="submit" value="Start">
-              </form>
-
-            </div>
-           <div class="container"><p>In a future version, a countdown timer goes here. It would need to communicate with system as well, so maybe this is two separate uinterface pieces. User shoulld be able to select game length in minutes and submit to system, then see a countdown in real time as the game runs </p></div>
-        </div><!--end #gameState-->
-      </div>
         <!--tabbed panels-->
 <div class="container">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="player-tab" data-toggle="tab" href="#player" role="tab" aria-controls="home" aria-selected="true">Settings</a>
+      <a class="nav-link active" id="player-tab" data-toggle="tab" href="#player" role="tab" aria-controls="button1" aria-selected="true">Settings</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="saved-tab" data-toggle="tab" href="#saved" role="tab" aria-controls="profile" aria-selected="false">Saved</a>
+      <a class="nav-link" id="saved-tab" data-toggle="tab" href="#saved" role="tab" aria-controls="button2" aria-selected="false">Saved</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="contact" aria-selected="false">Video</a>
+      <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="button3" aria-selected="false">Video</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="dev-tab" data-toggle="tab" href="#dev" role="tab" aria-controls="contact" aria-selected="false">Developer</a>
+      <a class="nav-link" id="dev-tab" data-toggle="tab" href="#dev" role="tab" aria-controls="button4" aria-selected="false">Developer</a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -125,16 +114,18 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="button1" data-parent="#playerSettings">
             <div class="card-body">
               <div class="container">
-                <div class="row">
+                <form>
+                <div class="row form-group">
                   <div class="col-3">
                     <label for="player-name-1">Player Name</label>
                   </div>
                   <div class="col-4">
                     <input class="form-control form-control-sm" type="text" id="player-name-1" name="player-name">
                   </div>
+                 
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
                     <label for="circle-size-1">Circle Expansion Size (1-10)</label>
                   </div>
@@ -143,7 +134,7 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
                     <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
                   </div>
@@ -152,7 +143,7 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
                     <label for="hold-seconds-1">Hold time (seconds)</label>
                   </div>
@@ -162,17 +153,19 @@
                 </div>
         
              
-              <div class="custom-control custom-switch mb-5">
+              <div class="custom-control custom-switch mb-5 form-group">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
                 <label class="custom-control-label" for="customSwitch1">Apply settings to all kick buttons</label>
               </div>  
-              <div class="row d-flex justify-content-between">
+              <div class="row d-flex justify-content-between form-group">
                 <div>
                   <input class="btn btn-secondary" type="submit" value="Delete" aria-label="delete button">
                 </div>
                 <div>
                   <input class="btn btn-primary" type="submit" value="Apply" aria-label="apply button">
                 </div>
+                </div>
+              </form>
               </div><!--end container-->
             </div><!--end button1 params-->
           </div><!--end.card-body-->
@@ -181,63 +174,68 @@
         <div class="card"><!--start a new card-->
           <div class="card-header" id="button2"><!--begin button2 params-->
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="btn btn-link collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                  Button 2
               </button>
             </h2>
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#playerSettings">
             <div class="card-body">
-              <div class="container">
-                <div class="row">
+              <form>
+                <div class="container">
+              
+                <div class="row form-group" >
                   <div class="col-3">
-                    <label for="player-name-1">Player Name</label>
+                    <label for="player-name-2">Player Name</label>
                   </div>
                   <div class="col-4">
-                    <input class="form-control form-control-sm" type="text" id="player-name-1" name="player-name">
+                    <input class="form-control form-control-sm" type="text" id="player-name-2" name="player-name">
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
-                    <label for="circle-size-1">Circle Expansion Size (1-10)</label>
+                    <label for="circle-size-2">Circle Expansion Size (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="circle-size-1" name="circle-size" step="1">
+                    <input class="form-control form-control-sm" type="number" value="3" id="circle-size-2" name="circle-size" step="1">
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
-                    <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
+                    <label for="circle-speed-2">Circle Expansion Speed (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-1" name="circle-speed" step="1">
+                    <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-2" name="circle-speed" step="1">
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row form-group">
                   <div class="col-5">
-                    <label for="hold-seconds-1">Hold time (seconds)</label>
+                    <label for="hold-seconds-2">Hold time (seconds)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
+                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-2" name="hold-seconds" step=".5">
                   </div>
                 </div>
         
              
-              <div class="custom-control custom-switch mb-5">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Apply settings to all kick buttons</label>
+              <div class="custom-control custom-switch mb-5 form-group">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Apply settings to all kick buttons</label>
               </div>  
               <div class="row d-flex justify-content-between">
-                <div>
-                  <input class="btn btn-secondary" type="submit" value="Delete" aria-label="delete button">
-                </div>
-                <div>
-                  <input class="btn btn-primary" type="submit" value="Apply" aria-label="apply button">
-                </div>
+                  <div>
+                    <input class="btn btn-secondary" type="submit" value="Delete" aria-label="delete button">
+                  </div>
+                  <div>
+                    <input class="btn btn-primary" type="submit" value="Apply" aria-label="apply button">
+                  </div>
+              </div>
+                
               </div><!--end container-->
+            </form> 
             </div><!--end button2 params-->
           </div><!--end.card-body-->
           </div>
@@ -245,7 +243,7 @@
         <div class="card">
           <div class="card-header" id="button3">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="btn btn-link collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Button 3
               </button>
             </h2>
@@ -255,44 +253,44 @@
               <div class="container">
                 <div class="row">
                   <div class="col-3">
-                    <label for="player-name-1">Player Name</label>
+                    <label for="player-name-3">Player Name</label>
                   </div>
                   <div class="col-4">
-                    <input class="form-control form-control-sm" type="text" id="player-name-1" name="player-name">
+                    <input class="form-control form-control-sm" type="text" id="player-name-3" name="player-name">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="circle-size-1">Circle Expansion Size (1-10)</label>
+                    <label for="circle-size-3">Circle Expansion Size (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="circle-size-1" name="circle-size" step="1">
+                    <input class="form-control form-control-sm" type="number" value="3" id="circle-size-3" name="circle-size" step="1">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
+                    <label for="circle-speed-3">Circle Expansion Speed (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-1" name="circle-speed" step="1">
+                    <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-3" name="circle-speed" step="1">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="hold-seconds-1">Hold time (seconds)</label>
+                    <label for="hold-seconds-3">Hold time (seconds)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
+                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-3" name="hold-seconds" step=".5">
                   </div>
                 </div>
         
              
               <div class="custom-control custom-switch mb-5">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Apply settings to all kick buttons</label>
+                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                <label class="custom-control-label" for="customSwitch3">Apply settings to all kick buttons</label>
               </div>  
               <div class="row d-flex justify-content-between">
                 <div>
@@ -309,7 +307,7 @@
         <div class="card">
           <div class="card-header" id="button4">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+              <button class="btn btn-link collapsed" id="headingFour" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
                 button 4
               </button>
             </h2>
@@ -319,44 +317,44 @@
               <div class="container">
                 <div class="row">
                   <div class="col-3">
-                    <label for="player-name-1">Player Name</label>
+                    <label for="player-name-4">Player Name</label>
                   </div>
                   <div class="col-4">
-                    <input class="form-control form-control-sm" type="text" id="player-name-1" name="player-name">
+                    <input class="form-control form-control-sm" type="text" id="player-name-4" name="player-name">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="circle-size-1">Circle Expansion Size (1-10)</label>
+                    <label for="circle-size-4">Circle Expansion Size (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" value="3" type="number" id="circle-size-1" name="circle-size" step="1">
+                    <input class="form-control form-control-sm" value="3" type="number" id="circle-size-4" name="circle-size" step="1">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
+                    <label for="circle-speed-4">Circle Expansion Speed (1-10)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" value="3" type="number" id="circle-speed-1" name="circle-speed" step="1">
+                    <input class="form-control form-control-sm" value="3" type="number" id="circle-speed-4" name="circle-speed" step="1">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-5">
-                    <label for="hold-seconds-1">Hold time (seconds)</label>
+                    <label for="hold-seconds-4">Hold time (seconds)</label>
                   </div>
                   <div class="col-2">
-                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
+                    <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-4" name="hold-seconds" step=".5">
                   </div>
                 </div>
         
              
               <div class="custom-control custom-switch mb-5">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Apply settings to all kick buttons</label>
+                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                <label class="custom-control-label" for="customSwitch4">Apply settings to all kick buttons</label>
               </div>  
               <div class="row d-flex justify-content-between">
                 <div>
@@ -374,28 +372,29 @@
      
       <div id="courtParams">
         <h3>Court Settings</h3>
-        <div class="container">
-          <div class="row">           
+        <form>
+          <div class="container">
+          <div class="row form-group">           
             <div class="col-3"><label for="ball-speed-max">Ball Speed Max (1-10)</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="ball-speed-max" name="ball-speed-max" min="0" max="10" step="1"></div>
           </div> 
-          <div class="row">  
+          <div class="row form-group">  
             <div class="col-3"><label for="goal-size">Goal Size (1-5)</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="goal-size" name="goal-size" min="0" max="10" step="1"></div>
           </div> 
-          <div class="row"> 
+          <div class="row form-group"> 
             <div class="col-3"><label for="friction">Friction (seconds)</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="friction" name="friction" min="0" max="10" step="1"></div>
           </div>
-          <div class="row">
+          <div class="row form-group">
             <div class="col-3"><label for="boundary-elasticity">Boundary Elasticity</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="boundary-elasticity" name="boundary-elasticity" min="0" max="10" step="1"></div>
           </div>
-          <div class="row"> 
+          <div class="row form-group"> 
             <div class="col-3"><label for="circle-elasticity">Circle Elasticity (1-10)</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="circle-elasticity" name="circle-elasticity" min="0" max="10" step="1"></div>
           </div>
-          <div class="row"> 
+          <div class="row form-group"> 
             <div class="col-3"><label for="circle-coefficient">Circle Coefficient(1-10)</label></div>
             <div class="col-5"><input class="form-control-sm" type="number" id="circle-coefficient" name="circle-coefficient" min="0" max="10" step="1"></div>
           </div>
@@ -404,7 +403,7 @@
 
       <div id="soundSelect">
         <h3>Sound Settings</h3>
-        <div class="container">
+        <div class="container form-group">
           <select class="custom-select mb-3">
             <option selected>Select Kick Sound</option>
             <option>sound 1</option>
@@ -447,17 +446,23 @@
           </select>      
         </div>    
       </div><!--end sound settings-->
+    </form>
       <div id="videoToggle"><!--video settings-->
         <h3>Video</h3>
         <div class="container">
-          <div class="custom-control custom-switch">
+          <div class="custom-control custom-switch form-group">
             <input type="checkbox" class="custom-control-input" id="customSwitchVid">
             <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
           </div>   
-        </div>            
-      </div class="container d-flex justify-content-around">
-        <button id="save" class="btn btn-primary">Save Game Settings</button>
-       </div>  
+        </div>  
+    </div class="container d-flex justify-content-around">
+    <button id="apply" class="btn btn-primary">Apply Game Parameters</button>
+   </div>        
+  
+  <div class="container d-flex justify-content-around">
+      <button id="save" class="btn btn-secondary">Save Game Settings</button>
+       
+  </div>  
 
             
             <div class="container tab-pane fade border border-secondary rounded-bottom" id="saved" role="tabpanel" aria-labelledby="saved-tab">
@@ -468,7 +473,7 @@
               <h3>Video</h3>
                 <p>video player would go here</p>
             </div>
-            <div class="container tab-pane fade border border-secondary rounded-bottom" id="dev" role="tabpanel" aria-labelledby="developer-tab">
+            <div class="container tab-pane fade border border-secondary rounded-bottom" id="dev" role="tabpanel" aria-labelledby="dev-tab">
                 <h3>Debugger</h3>
                 <p>debug tab for developers</p>
             </div>        
