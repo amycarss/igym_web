@@ -12,8 +12,8 @@
     </style>
 </head>
 <body>
-  <!--tabbed panels-->
-<main>
+  <!--tabbed panels with game additional game parameters-->
+<main class="p-3">
 <div class="tab-panel">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
@@ -306,27 +306,27 @@
             <div class="container">
             <div class="row form-group">           
               <div class="col-3"><label for="ball-speed-max">Ball Speed Max (1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="ball-speed-max" name="ball-speed-max" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="ball-speed-max" name="ball-speed-max" value="3" min="0" max="10" step="1"></div>
             </div> 
             <div class="row form-group">  
               <div class="col-3"><label for="goal-size">Goal Size (1-5)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="goal-size" name="goal-size" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="goal-size" name="goal-size" value="3" min="0" max="10" step="1"></div>
             </div> 
             <div class="row form-group"> 
               <div class="col-3"><label for="friction">Friction (seconds)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="friction" name="friction" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="friction" name="friction" value="3" min="0" max="10" step="1"></div>
             </div>
             <div class="row form-group">
               <div class="col-3"><label for="boundary-elasticity">Boundary Elasticity</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="boundary-elasticity" name="boundary-elasticity" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="boundary-elasticity" value="3" name="boundary-elasticity" min="0" max="10" step="1"></div>
             </div>
             <div class="row form-group"> 
               <div class="col-3"><label for="circle-elasticity">Circle Elasticity (1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="circle-elasticity" name="circle-elasticity" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="circle-elasticity" value="3" name="circle-elasticity" min="0" max="10" step="1"></div>
             </div>
             <div class="row form-group"> 
               <div class="col-3"><label for="circle-coefficient">Circle Coefficient(1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="circle-coefficient" name="circle-coefficient" min="0" max="10" step="1"></div>
+              <div class="col-5"><input class="form-control-sm" type="number" id="circle-coefficient" value="3" name="circle-coefficient" min="0" max="10" step="1"></div>
             </div>
           </div><!--container-->
         </form>
@@ -336,46 +336,96 @@
           <h3>Sound Settings</h3>
           <form>
           <div class="container form-group">
-            <select class="custom-select mb-3">
-              <option selected>Select Kick Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>      
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Boundary Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Goal Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Celebration Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Game-Over Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>      
+              <div class="row">
+                <div class="col-3">
+                  <label for="kick">Kick</label>
+                </div>
+                <div class="col-sm">
+              <select class="custom-select mb-3" id="kick">
+                <option selected>Select Kick Sound</option>
+                <option>sound 1</option>
+                <option>sound  2</option>
+                <option>sound  3</option>
+                <option>sound  4</option>
+                <option>sound  5</option>      
+              </select>
+            </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-primary">Test</button>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <label for="boundary">Boundary</label>
+                </div>
+                <div class="col-sm">
+              <select class="custom-select mb-3" id="boundary">
+                <option selected>Select Boundary Sound</option>
+                <option>sound 1</option>
+                <option>sound  2</option>
+                <option>sound  3</option>
+                <option>sound  4</option>
+                <option>sound  5</option>  
+              </select>
+            </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-primary">Test</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <label for="goal">Goal</label>
+              </div>
+              <div class="col-sm">
+              <select class="custom-select mb-3" id="goal">
+                <option selected>Select Goal Sound</option>
+                <option>sound 1</option>
+                <option>sound  2</option>
+                <option>sound  3</option>
+                <option>sound  4</option>
+                <option>sound  5</option>  
+              </select>
+            </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-primary">Test</button>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <label for="celebrate">Celebration</label>
+                </div>
+                <div class="col-sm">
+              <select class="custom-select mb-3" id="celebrate">
+                <option selected>Select Celebration Sound</option>
+                <option>sound 1</option>
+                <option>sound 2</option>
+                <option>sound 3</option>
+                <option>sound 4</option>
+                <option>sound 5</option>  
+              </select>
+            </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-primary">Test</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <label for="gameover">Game-Over</label>
+              </div>
+              <div class="col-sm">
+              <select class="custom-select mb-3" id="gameover">
+                <option selected>Select Game-Over Sound</option>
+                <option>sound 1</option>
+                <option>sound 2</option>
+                <option>sound 3</option>
+                <option>sound 4</option>
+                <option>sound 5</option>  
+              </select>   
+            </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-primary">Test</button>
+              </div> 
+            </div>  
           </div>
         </form>    
         </div><!--end sound settings-->
@@ -389,112 +439,15 @@
             </div>   
           </div>  
         </div>
-        <div class="container d-flex justify-content-around">
+        <div class="container d-flex justify-content-around mt-2 mb-4">
       <button id="apply" class="btn btn-primary">Apply Game Parameters</button>
         </div>        
         
-        <div class="container d-flex justify-content-around">
+        <div class="container d-flex justify-content-around mt-2 mb-2">
             <button id="save" class="btn btn-secondary">Save Game Settings</button>
             
         </div>
-        <div id="courtParams">
-          <h3>Court Settings</h3>
-          <form>
-            <div class="container">
-            <div class="row form-group">           
-              <div class="col-3"><label for="ball-speed-max">Ball Speed Max (1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="ball-speed-max" name="ball-speed-max" min="0" max="10" step="1"></div>
-            </div> 
-            <div class="row form-group">  
-              <div class="col-3"><label for="goal-size">Goal Size (1-5)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="goal-size" name="goal-size" min="0" max="10" step="1"></div>
-            </div> 
-            <div class="row form-group"> 
-              <div class="col-3"><label for="friction">Friction (seconds)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="friction" name="friction" min="0" max="10" step="1"></div>
-            </div>
-            <div class="row form-group">
-              <div class="col-3"><label for="boundary-elasticity">Boundary Elasticity</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="boundary-elasticity" name="boundary-elasticity" min="0" max="10" step="1"></div>
-            </div>
-            <div class="row form-group"> 
-              <div class="col-3"><label for="circle-elasticity">Circle Elasticity (1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="circle-elasticity" name="circle-elasticity" min="0" max="10" step="1"></div>
-            </div>
-            <div class="row form-group"> 
-              <div class="col-3"><label for="circle-coefficient">Circle Coefficient(1-10)</label></div>
-              <div class="col-5"><input class="form-control-sm" type="number" id="circle-coefficient" name="circle-coefficient" min="0" max="10" step="1"></div>
-            </div>
-          </div><!--container-->
-        </form>
-        </div><!--end court setup-->    
-       
-        <div id="soundSelect">
-          <h3>Sound Settings</h3>
-          <form>
-          <div class="container form-group">
-            <select class="custom-select mb-3">
-              <option selected>Select Kick Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>      
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Boundary Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Goal Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Celebration Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>
-            <select class="custom-select mb-3">
-              <option selected>Select Game-Over Sound</option>
-              <option>sound 1</option>
-              <option>sound  2</option>
-              <option>sound  3</option>
-              <option>sound  4</option>
-              <option>sound  5</option>  
-            </select>      
-          </div>
-        </form>    
-        </div><!--end sound settings-->
-       
-        <div id="videoToggle"><!--video settings-->
-          <h3>Video</h3>
-          <div class="container">
-            <div class="custom-control custom-switch form-group">
-              <input type="checkbox" class="custom-control-input" id="customSwitchVid">
-              <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
-            </div>   
-          </div>  
-        </div>
-        <div class="container d-flex justify-content-around">
-      <button id="apply" class="btn btn-primary">Apply Game Parameters</button>
-        </div>        
-        
-        <div class="container d-flex justify-content-around">
-            <button id="save" class="btn btn-secondary">Save Game Settings</button>
-            
 
-        </div>
       </div><!--end accordion--> 
 
 
