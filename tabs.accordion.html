@@ -8,16 +8,87 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@3.0.0-rc.0/dist/css/coreui.min.css">
     <style>
-     .collapse .row{margin-bottom:.5em;}
+      input{
+        margin:0 1em;
+      }
+      .card{
+        margin-bottom:.5em;
+      }
+      .card-header{
+        padding:0;
+      }
+    
+      h3{
+        padding:.5em 0;
+        border-bottom:.5px solid;
+      }
+      .collapse .row, #courtParams .row{
+        margin-bottom:.5em;
+        }
+     
     </style>
 </head>
 <body>
-  <!--tabbed panels with game additional game parameters-->
+  <header>
+    <nav class="navbar bg-light flex-md-nowrap pl-10 pr-10 shadow">
+      <h1>iGym</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+          Login
+        </button>
+    </nav>      
+  </header>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" role="dialog">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">User Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
+              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Log In</button>
+          </div>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+ <!--end header and modal-->
 <main class="p-3">
-<div class="tab-panel">
+  <div id="gameChoice" class="container">
+    <div class="row">
+      <form>
+        <div class="col-sm">
+          <select class="custom-select custom-select-md mb-3">
+          <option selected>Select Game</option>
+          <option id="soccerHockey">Soccer/Air hockey</option>
+            <option id="pacman">Pac man</option>
+            <option id="soccerPower">Soccer with power-up</option>
+            <option id="euchre">Euchre</option>  
+          </select>
+        </div>
+      </form>
+      <div class="col-sm"><button class="btn btn-secondary">Recapture background</button></div>
+    </div>
+      </div>     
+  <div class="container text-center"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+   <!--tabbed panels with additional game parameters-->
+<div class="tab-panel" role="">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="player-tab" data-toggle="tab" href="#player" role="tab" aria-controls="button1" aria-selected="true">Settings</a>
+      <a class="nav-link active" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="button1" aria-selected="true">Settings</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="saved-tab" data-toggle="tab" href="#saved" role="tab" aria-controls="button2" aria-selected="false">Saved</a>
@@ -30,18 +101,18 @@
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade active show" id="player" role="tabpanel" aria-labelledby="player-tab">
+    <div class="tab-pane fade active show" id="settings" role="tabpanel" aria-labelledby="settings-tab">
       <h3>Kick Button Settings</h3>
       <div class="accordion" id="playerSettings" role="navigation">
         <div class="card">
           <div class="card-header" id="button1">
             <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Button 1
               </button>
             </h2>
           </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="button1" data-parent="#playerSettings">
+          <div id="collapseOne" class="collapse" aria-labelledby="button1" data-parent="#playerSettings">
             <div class="card-body">
               <div class="container">
                 <form>
@@ -109,7 +180,7 @@
               </button>
             </h2>
           </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#playerSettings">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
             <div class="card-body">
               <form>
                 <div class="container">
@@ -178,7 +249,7 @@
               </button>
             </h2>
           </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#playerSettings">
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
             <div class="card-body">
               <div class="container">
                 <div class="row">
@@ -242,7 +313,7 @@
               </button>
             </h2>
           </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#playerSettings">
+          <div id="collapseFour" class="collapse" aria-labelledby="headingThree">
             <div class="card-body">
               <div class="container">
                 <div class="row">
@@ -302,6 +373,7 @@
       
         <div id="courtParams">
           <h3>Court Settings</h3>
+          <div class="card pt-4">
           <form>
             <div class="container">
             <div class="row form-group">           
@@ -330,10 +402,12 @@
             </div>
           </div><!--container-->
         </form>
+      </div>
         </div><!--end court setup-->    
        
         <div id="soundSelect">
           <h3>Sound Settings</h3>
+          <div class="card pt-4">
           <form>
           <div class="container form-group">
               <div class="row">
@@ -427,17 +501,20 @@
               </div> 
             </div>  
           </div>
-        </form>    
+        </form> 
+      </div>   
         </div><!--end sound settings-->
        
         <div id="videoToggle"><!--video settings-->
           <h3>Video</h3>
+          <div class="card pt-4">
           <div class="container">
             <div class="custom-control custom-switch form-group">
               <input type="checkbox" class="custom-control-input" id="customSwitchVid">
               <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
             </div>   
-          </div>  
+          </div> 
+        </div> 
         </div>
         <div class="container d-flex justify-content-around mt-2 mb-4">
       <button id="apply" class="btn btn-primary">Apply Game Parameters</button>
@@ -468,9 +545,9 @@
 
     </div>
     </div>  
-</div> 
+    </div> 
 
-  </main>
+</main>
 <script src="https://code.jquery.com/jquery-2.2.4.js"
 integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 crossorigin="anonymous"></script>
