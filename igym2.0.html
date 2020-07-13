@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tab panel troubleshoot</title>
+    <title>home screen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@3.0.0-rc.0/dist/css/coreui.min.css">
-    <style>
-      input{
-        margin:0 1em;
-      }
-      .card{
-        margin-bottom:.5em;
-      }
-      .card-header{
-        padding:0;
-      }
-    
-      h3{
-        padding:.5em 0;
-        border-bottom:.5px solid;
-      }
-      .collapse .row, #courtParams .row{
-        margin-bottom:.5em;
-        }
-     
-    </style>
+    <!--<link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@3.0.0-rc.0/dist/css/coreui.min.css">-->
+    <link rel="stylesheet" href="css/igym-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <header>
+        <div class="navbar bg-light flex-md-nowrap pl-10 pr-10 shadow">
+          <h1 class="identity">iGym</h1>
+        </div>      
+    </header>
+     <main class="p-3">
+        <div id="gameChoice" class="container">
+            <div class="row">
+                <form>
+                    <div class="col-sm">
+                    <select class="custom-select custom-select-md mb-3">
+                    <option selected>Select Game</option>
+                    <option id="soccerHockey">Soccer/Air hockey</option>
+                        <option id="pacman">Pac man</option>
+                        <option id="soccerPower">Soccer with power-up</option>
+                        <option id="euchre">Euchre</option>  
+                    </select>
+                    </div>
+                </form>
+                <div class="col-sm"><button class="btn btn-secondary">Recapture background</button></div>
+            </div>
+        </div>     
+        <div class="container text-center"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+        <!--component that will display score data from system-->
+            <div class="row">
+            <h2> Court 1</h2>
+            <h2>Court 2</h2>
+        </div>
+        <!--configurable countdown timer-->
+        
+    </main>
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9&#43;4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+/*iGYM blue: #00a3ff*/
+
+h1, h2, h3, h4{
+    font-family: 'Roboto', sans-serif;
+}
+p {font-family:'Open Sans', sans-serif;
+}
+input{
+  margin:0 1em;
+}
+.card{
+  margin-bottom:.5em;
+}
+.card-header{
+  padding:0;
+}
+
+h3{
+  padding:.5em 0;
+  border-bottom:.5px solid;
+}
+.collapse .row, #courtParams .row{
+  margin-bottom:.5em;
+  }
+button.btn.btn-primary{
+   background: #00a3ff;
+   border:#00a3ff;
+}
+button.btn.btn-link{
+    color: #00a3ff;
+}
+.identity{
+    color:#00a3ff;
+    font-weight:700;
+    font-style: italic;
+}
+.accordion{
+    width:600px;
+}

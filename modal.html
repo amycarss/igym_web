@@ -43,6 +43,45 @@
   </div>
   
 
+
+  <!--header with button that triggers login modal-->
+
+  <header>
+    <div class="navbar bg-light flex-md-nowrap pl-10 pr-10 shadow">
+      <h1>iGym</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+          Login
+        </button>
+    </div>      
+</header>
+<!--modal for user login-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" role="dialog">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">User Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
+              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Log In</button>
+          </div>
+        </form>
+        </div>
+    </div>
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9&#43;4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
     crossorigin="anonymous"></script>
