@@ -34,8 +34,12 @@ button.btn.btn-primary, .nav li span{
    background: #00a3ff;
    border:#00a3ff;
 }
-button.btn.btn-link,{
+button.btn.btn-link{
     color: #00a3ff;
+}
+#homeicon{
+  padding:.75em .75em .75em 1.5em;
+  margin-right:1em;
 }
 .identity{
     color:#fff;
@@ -44,19 +48,22 @@ button.btn.btn-link,{
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     margin:0 auto;
-    
 }
+
 .accordion{
     width:600px;
 }
 .nav{
   display:block;/*make the nav stack*/
 }
-
+#homeicon{
+  padding:.75em .75em .75em 0;
+  margin-right:1em;
+}
 span.navtab{
   background-color:#00a3ff;
   height:45px;
-  padding:.75em .75em .75em 1.5em;
+  padding:.75em .75em .75em 1.75em;
   margin-right:1em;
   border-radius:0 7px 7px 0;
 }
