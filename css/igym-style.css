@@ -5,10 +5,17 @@ h1, h2, h3, h4{
 }
 p {font-family:'Open Sans', sans-serif;
 }
+h1, h2, h3, h4{
+  font-family: 'Roboto', sans-serif;
+}
 input{
   margin:0 1em;
 }
-.card{
+.navbar{
+  background-color:#00a3ff;
+}
+
+/*.card{
   margin-bottom:.5em;
 }
 .card-header{
@@ -22,17 +29,22 @@ h3{
 .collapse .row, #courtParams .row{
   margin-bottom:.5em;
   }
+  */
 button.btn.btn-primary, .nav li span{
    background: #00a3ff;
    border:#00a3ff;
 }
-button.btn.btn-link{
+button.btn.btn-link,{
     color: #00a3ff;
 }
 .identity{
-    color:#00a3ff;
+    color:#fff;
     font-weight:700;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    margin:0 auto;
+    
 }
 .accordion{
     width:600px;
@@ -40,9 +52,7 @@ button.btn.btn-link{
 .nav{
   display:block;/*make the nav stack*/
 }
-header img{
-  width:35px;
-  }
+
 span.navtab{
   background-color:#00a3ff;
   height:45px;
@@ -53,3 +63,14 @@ span.navtab{
 .nav li{
   margin:1em 1em 1em 0;
 }
+header.container-fluid{
+  padding:0;
+}
+header img{
+  width:35px;
+  height:35px;
+  }
+  .container-fluid .row{
+    width:100%;
+    padding:1em 0 0 1em;
+  }
