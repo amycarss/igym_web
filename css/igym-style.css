@@ -22,7 +22,7 @@ h3{
 .collapse .row, #courtParams .row{
   margin-bottom:.5em;
   }
-button.btn.btn-primary{
+button.btn.btn-primary, .nav li span{
    background: #00a3ff;
    border:#00a3ff;
 }
@@ -40,3 +40,20 @@ button.btn.btn-link{
 .nav{
   display:block;/*make the nav stack*/
 }
+header img{
+  width:35px;
+  background-color:#00a3ff;
+  padding:.25em;
+
+}
+.nav li span{
+  height:40px;
+  padding:.25em;
+}
+.nav img{
+  margin:1em 1em 0 1em;
+}
+/*header.container{
+  margin:0;
+  padding:0;
+}*/

@@ -9,21 +9,36 @@
     <link rel="stylesheet" href="css/igym-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-
+<!--icon credits:
+            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> 
+<https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+<a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>
+<a href="https://www.flaticon.com/free-icon/web-programming_1336593" title="Icongeek26">Icongeek26</a>
+         -->
 <body>
     <header>
-        <div class="navbar bg-light flex-md-nowrap pl-10 pr-10 shadow">
-          <h1 class="identity">iGym</h1>
+        <div class="bg-light flex-md-nowrap">
+          <a href="igym2.0.html"></a><img src="assets/home-run.png" alt="home icon"/></a><h1 class="identity">iGym</h1>
         </div>
-        <ul class="nav">
-            <li><a href="settings.html"></a>Settings</li>
-            <li><a href="saved.html"></a>Saved</li>
-            <li><a href="video.html"></a>Video</li>
-            <li><a href="developer.html"></a>Developer</li>
-        </ul>     
+    
+  
+
+            <ul class="nav"><!--navigation buttons-->
+                <li><a href="setting.html"><img src="assets/settings.png" alt="settings icon"/>Settings</a></li>
+                <li><a href="saved.html"><img src="assets/refresh.png" alt="reload icon"/>Saved Games</a></li>
+                <li><a href="video.html"><img src="assets/video-camera.png"alt="video camera icon"/>Video</a></li>
+                <li><a href="developer.html"><img src="assets/code.png" alt="code icon"/>Developer</a></li>
+            </ul>       
+          
+            <div class="slidecontainer"><!--add volume control-->
+                <p class="mt-2">Volume<input type="range" min="1" max="100" value="50" class="slider" id="myRange"></p>
+            </div>  
+         
+    
     </header>
-     <main class="p-3">
-        <div id="gameChoice" class="container">
+     <main class="container p-3">
+        <div id="gameChoice">
             <div class="row">
                 <form>
                     <div class="col-sm">
@@ -39,7 +54,7 @@
                 <div class="col-sm"><button class="btn btn-secondary">Recapture background</button></div>
             </div>
         </div>     
-        <div class="container text-center"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+        <div class="text-center"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
         <!--component that will display score data from system-->
             <div class="row">
             <h2> Court 1</h2>
