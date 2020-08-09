@@ -42,18 +42,14 @@ button.btn.btn-link{
 }
 header img{
   width:35px;
+  }
+span.navtab{
   background-color:#00a3ff;
-  padding:.25em;
-
+  height:45px;
+  padding:.75em .75em .75em 1.5em;
+  margin-right:1em;
+  border-radius:0 7px 7px 0;
 }
-.nav li span{
-  height:40px;
-  padding:.25em;
+.nav li{
+  margin:1em 1em 1em 0;
 }
-.nav img{
-  margin:1em 1em 0 1em;
-}
-/*header.container{
-  margin:0;
-  padding:0;
-}*/
