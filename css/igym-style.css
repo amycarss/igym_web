@@ -37,3 +37,6 @@ button.btn.btn-link{
 .accordion{
     width:600px;
 }
+.nav{
+  display:block;/*make the nav stack*/
+}
