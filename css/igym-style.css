@@ -23,12 +23,10 @@ input{
 /*link states*/
 
 a:link{text-decoration:underline; color:#00a3ff;}
-a:hover{color:darkblue}
-a:visited{}
-a:active{}
+a:hover{color:#fff; background-color:#00a3ff;}
 
-.nav a:link{text-decoration:none; color:#00a3ff;}
-.nav a:hover li{border:.5px dashed #00a3ff;}
+.nav a:link{text-decoration:none; color:#00a3ff;padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
+.nav a:hover{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
 
 .card{
   margin-bottom:.5em;

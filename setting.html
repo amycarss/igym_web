@@ -21,7 +21,7 @@
         </div>
 
     <div class="row justify-content-between">
-        <nav class="nav col-xsm-4"><!--navigation buttons-->
+        <nav class="nav col-xsm-5"><!--navigation buttons-->
             <a href="setting.html"><span class="navtab shadow-sm"><i class="fas fa-cog"></i></span>Settings</a>
             <a href="saved.html"><span class="navtab shadow-sm"><i class="fas fa-redo-alt"></i></span>Saved Games</a>
             <a href="video.html"><span class="navtab shadow-sm"><i class="fas fa-video"></i></span>Video</a>
@@ -66,7 +66,7 @@
                     <div class="col-5">
                       <label for="circle-size-1">Circle Expansion Size (1-10)</label>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                       <input class="form-control form-control-sm" type="number" id="circle-size-1" value="3" name="circle-size" step="1">
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                     <div class="col-5">
                       <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                       <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-1" name="circle-speed" step="1">
                     </div>
                   </div>
@@ -84,7 +84,7 @@
                     <div class="col-5">
                       <label for="hold-seconds-1">Hold time (seconds)</label>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                       <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
                     </div>
                   </div>
@@ -144,9 +144,7 @@
           <div class="custom-control custom-switch form-group">
             <input type="checkbox" class="custom-control-input" id="customSwitchVid">
             <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
-          </div> 
-        
-        </div>
+          </div><!--end the video toggle div-->
         <div class="container d-flex justify-content-around mt-2 mb-2">
             <button id="save" class="btn btn-secondary">Save Game Settings</button><!--option to save settings would open a dialogue and prompt for name-->
         </div>
