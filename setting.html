@@ -37,16 +37,16 @@
     <main class="p-3">
       <div class="container"><!--container for entire accordion-->
         <h2>Settings</h2>
-        <div class="accordion" id="kickSettings" role="navigation">
+        <div class="accordion" id="settings" role="navigation">
           <div class="card"> <!--this is the kick button settings-->
             <div class="card-header" id="kick">
             
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <span class="chev"><i class="fas fa-angle-right"></i></span>Kick Button
+                    <span class="chev"><i class="fas fa-angle-right"></i></span>  Kick Button
                 </button>
                
             </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="kick" data-parent="#kickSettings">
+            <div id="collapseOne" class="collapse" aria-labelledby="kick" data-parent="#settings">
               <!--kick button controls-->
               <div class="card-body">
                 <div class="container">
@@ -110,11 +110,11 @@
           <div class="card-header" id="court">  
             
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="chev"><i class="fas fa-angle-right"></i></span>Court
+                  <span class="chev"><i class="fas fa-angle-right"></i></span>  Court
                 </button>
             
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="court" data-parent="#kickSettings">
+            <div id="collapseTwo" class="collapse" aria-labelledby="court" data-parent="#settings">
               <div class="card-body">
                 <div class="container">
                  <!--the stuff that goes inside the accordion goes here-->
@@ -131,7 +131,7 @@
                 </button>
             
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="Sound" data-parent="#kickSettings">
+            <div id="collapseThree" class="collapse" aria-labelledby="Sound" data-parent="#settings">
               <div class="card-body">
                 <div class="container">
                  <!--the stuff that goes inside the accordion goes here-->
@@ -140,14 +140,15 @@
             </div><!--end#collapseThree-->
           </div><!--end.card-->
           <div class="card-header" id="video">
-          <p>Video<p>
-          <div class="custom-control custom-switch form-group">
+            <p>Video<p>
+            <div class="custom-control custom-switch form-group d-inline">
             <input type="checkbox" class="custom-control-input" id="customSwitchVid">
             <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
           </div><!--end the video toggle div-->
-        <div class="container d-flex justify-content-around mt-2 mb-2">
-            <button id="save" class="btn btn-secondary">Save Game Settings</button><!--option to save settings would open a dialogue and prompt for name-->
         </div>
+        <div class="container d-flex justify-content-around mt-2 mb-2">
+            <button id="save" class="btn btn-primary">Save Game Settings</button><!--option to save settings would open a dialogue and prompt for name-->
+      
         </div><!--end of .accordion-->
         </div><!--end .container-->  
     </main>

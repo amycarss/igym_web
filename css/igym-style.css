@@ -8,6 +8,10 @@ p {font-family:'Open Sans', sans-serif;
 h1, h2, h3, h4{
   font-family: 'Roboto', sans-serif;
 }
+#video p{
+  color: #00a3ff;
+  margin-left: 30px;
+}
 
 input{
   margin:0 1em;
@@ -22,8 +26,6 @@ input{
 
 /*link states*/
 
-a:link{text-decoration:underline; color:#00a3ff;}
-a:hover{color:#fff; background-color:#00a3ff;}
 
 .nav a:link{text-decoration:none; color:#00a3ff;padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
 .nav a:hover{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
