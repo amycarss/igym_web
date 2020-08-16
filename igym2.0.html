@@ -8,63 +8,70 @@
     <!--<link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@3.0.0-rc.0/dist/css/coreui.min.css">-->
     <link rel="stylesheet" href="css/igym-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b26ee70c31.js" crossorigin="anonymous"></script>
 </head>
-<!--icon credits:
-            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> 
-<https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-<a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>
-<a href="https://www.flaticon.com/free-icon/web-programming_1336593" title="Icongeek26">Icongeek26</a>
-         -->
+
 <body>
     <header>
         <div class="container-fluid navbar flex-md-nowrap pl-10 pr-10 shadow">
             <div class="row">
-                <a href="igym2.0.html"><span id=homeicon><img src="assets/home-run.png" alt="home icon"/></span></a>
+                <a href="igym2.0.html"><span id=homeicon><i class="fas fa-home"></i></span></a>
                 <p class="identity">iGym</p>
             </div>
         </div>
     
   
-        <div class="row">
-            <ul class="nav col-5"><!--navigation buttons-->
-                <li><a href="setting.html"><span class="navtab"><img src="assets/settings.png" alt="settings icon"/></span>Settings</a></li>
-                <li><a href="saved.html"><span class="navtab"><img src="assets/refresh.png" alt="reload icon"/></span>Saved Games</a></li>
-                <li><a href="video.html"><span class="navtab"><img src="assets/video-camera.png"alt="video camera icon"/></span>Video</a></li>
-                <li><a href="developer.html"><span class="navtab"><img src="assets/code.png" alt="code icon"/></span>Developer</a></li>
+        <div class="row justify-content-between">
+            <ul class="nav col-xsm-4"><!--navigation buttons-->
+                <a href="setting.html"><li></li><span class="navtab shadow-sm"><i class="fas fa-cog"></i></span>Settings</li></a>
+                <a href="saved.html"><li><span class="navtab shadow-sm"><i class="fas fa-redo-alt"></i></span>Saved Games</li></a>
+                <a href="video.html"><li><span class="navtab shadow-sm"><i class="fas fa-video"></i></span>Video</li></a>
+                <a href="developer.html"><li><span class="navtab shadow-sm"><i class="fas fa-code"></i></span>Developer</li></a>
             </ul>       
           
-            <div class="slidecontainer col"><!--add volume control-->
-                <p class="mt-3">Volume<input type="range" min="1" max="100" value="50" class="slider" id="myRange"></p>
+            <div class="slidecontainer col-sm-auto"><!--add volume control-->
+                <p class="control mt-3 shadow-sm">Volume&nbsp;&nbsp;<i class="fas fa-volume-off"></i><input type="range" min="1" max="100" value="50" class="slider" id="myRange"><i class="fas fa-volume-up"></i></p>
             </div>  
         </div>
     
     </header>
-     <main class="container p-3">
-        <div id="gameChoice">
-            <div class="row">
-                <form>
-                    <div class="col-sm">
-                    <select class="custom-select custom-select-md mb-3">
-                    <option selected>Select Game</option>
-                    <option id="soccerHockey">Soccer/Air hockey</option>
-                        <option id="pacman">Pac man</option>
-                        <option id="soccerPower">Soccer with power-up</option>
-                        <option id="euchre">Euchre</option>  
-                    </select>
+     <main class="p-3">
+         <div class="container">
+        <div id="gameChoice" class="container">
+            <div class="row justify-content-center">
+                    <div class="col-3">
+                        <select class="custom-select custom-select-md mb-3">
+                            <option selected>Select Game</option>
+                            <option id="soccerHockey">Soccer/Air hockey</option>
+                            <option id="pacman">Pac man</option>
+                            <option id="soccerPower">Soccer with power-up</option>
+                            <option id="euchre">Euchre</option>  
+                        </select>
                     </div>
                 </form>
-                <div class="col-sm"><button class="btn btn-secondary">Recapture background</button></div>
+                <div class="col-3"><button class="btn btn-secondary">Recapture background</button></div>
             </div>
-        </div>     
-        <div class="text-center"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+        </div>  
+        <div class="text-center mt-5"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+    </div><!--end of container-->
+    <div class="container">
         <!--component that will display score data from system-->
-            <div class="row">
-            <h2> Court 1</h2>
-            <h2>Court 2</h2>
-        </div>
-        <!--configurable countdown timer-->
-        
+            <div class="row justify-content-around">
+                <div>
+                    <h2> Court 1</h2>
+
+                </div>
+                <div>
+                    <h2>Court 2</h2>
+                </div>
+            </div>
+       
+    </div><!--end of game state container-->
+    <div class="text-center mt-5"><!--pomodoro timer center aligned-->
+
+
+
+    </div>
     </main>
 <script src="https://code.jquery.com/jquery-2.2.4.js"
 integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
