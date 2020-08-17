@@ -20,14 +20,14 @@
     
         <div class="row justify-content-between">
             <nav class="nav col-xsm-5"><!--navigation buttons-->
-                <a href="setting.html"><span class="navtab shadow-sm"><i class="fas fa-cog"></i></span>Settings</a>
-                <a href="saved.html"><span class="navtab shadow-sm"><i class="fas fa-redo-alt"></i></span>Saved Games</a>
-                <a href="video.html"><span class="navtab shadow-sm"><i class="fas fa-video"></i></span>Video</a>
-                <a href="developer.html"><span class="navtab shadow-sm"><i class="fas fa-code"></i></span>Developer</a>
+                <a href="setting.html"><span class="navtab shadow-sm align-middle"><i class="fas fa-cog"></i></span>Settings</a>
+                <a href="saved.html"><span class="navtab shadow-sm align-middle"><i class="fas fa-redo-alt"></i></span>Saved Games</a>
+                <a href="video.html"><span class="navtab shadow-sm align-middle"><i class="fas fa-video"></i></span>Video</a>
+                <a href="developer.html"><span class="navtab shadow-sm align-middle"><i class="fas fa-code"></i></span>Developer</a>
             </nav>       
           
-            <div class="slidecontainer col-sm-auto"><!--add volume control-->
-                <p class="control mt-3 shadow-sm">Volume&nbsp;&nbsp;<i class="fas fa-volume-off"></i><input type="range" min="1" max="100" value="50" class="slider" id="myRange"><i class="fas fa-volume-up"></i></p>
+            <div class="slidecontainer mt-3 px-3 col-sm-auto"><!--add volume control-->
+               <span class="align-middle control px-3 py-2 shadow-sm"><label for="volume">Volume&nbsp;&nbsp;</label><i class="fas fa-volume-off"></i><input type="range" min="1" max="100" value="50" class="slider" id="volume"><i class="fas fa-volume-up"></i></span>
             </div>  
         </div>
     
@@ -36,7 +36,7 @@
     <div class="container">
             <div id="gameChoice" class="container">
             <div class="row justify-content-center">
-                    <div class="col-3">
+                    <div class="col-xsm">
                         <select class="custom-select custom-select-md mb-3">
                             <option selected>Select Game</option>
                             <option id="soccerHockey">Soccer/Air hockey</option>
@@ -46,10 +46,10 @@
                         </select>
                     </div>
                 </form>
-                <div class="col-3"><button class="btn btn-secondary">Recapture background</button></div>
+                <div class="col-xsm mx-5"><button class="btn btn-secondary">Recapture background</button></div>
             </div>
         </div>  
-        <div class="text-center mt-5"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
+        <div class="text-center mt-5 col-xsm mx-auto"><button class="btn btn-primary mt-2 mb-4">START/STOP</button></div>
     </div><!--end of container-->
     <div class="container">
         <!--component that will display score data from system-->

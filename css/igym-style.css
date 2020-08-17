@@ -25,11 +25,9 @@ input{
 }
 
 /*link states*/
-
-
 .nav a:link{text-decoration:none; color:#00a3ff;padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
-.nav a:hover{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
-
+.nav a:hover, .nav a:active{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
+.nav a:active
 .card{
   margin-bottom:.5em;
 }
@@ -80,9 +78,9 @@ button.btn.btn-link, .chev i{
 }
 .control{/*style the volume control this would probably be better done with bootstrap container*/
   background-color:#00a3ff;
-  padding:.75em .5em .75em 1.5em;
+  /*padding:.75em .5em .75em 1.5em;*/
   color:#fff;
-  width:330px;
+  /*width:330px;*/
   border-radius:7px 0 0 7px;
  }
 .nav a{
