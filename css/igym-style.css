@@ -8,50 +8,21 @@ p {font-family:'Open Sans', sans-serif;
 h1, h2, h3, h4{
   font-family: 'Roboto', sans-serif;
 }
-#video p{
-  color: #00a3ff;
-  margin-left: 30px;
-}
-
-input{
-  margin:0 1em;
-}
 .control input{
   color:#898989;
 }
-.navbar{
-  background-color:#00a3ff;
-  padding:0 1rem;
-}
-
 /*link states*/
-.nav a:link{text-decoration:none; color:#00a3ff;padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
-.nav a:hover, .nav a:active{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0; border-radius:0 7px 7px 0;}
-.nav a:active
-.card{
-  margin-bottom:.5em;
-}
-.card-header{
-  padding:0;
-}
+.nav a:link{text-decoration:none; color:#00a3ff; padding:5px 5px 5px 0;}
+.nav a:hover, .nav a:active, a.open{color:#fff; background-color:#00a3ff; padding:5px 5px 5px 0;}
 
-h3{
-  padding:.5em 0;
-  border-bottom:.5px solid;
-}
-.collapse .row, #courtParams .row{
-  margin-bottom:.5em;
-  }
  button.btn.btn-primary, .nav li span{
-   background: #00a3ff;
    border:#00a3ff;
 }
-button.btn.btn-link, .chev i{
+button.btn.btn-link, .chev i, #video p{
     color: #00a3ff;
 }
-#homeicon{
-  padding:.75em .75em .75em 1.5em;
-  margin-right:1em;
+nav a i, .navbar, button.btn.btn-primary, .nav li span, .control{
+  background-color:#00a3ff;
 }
 .identity{
     color:#fff;
@@ -59,46 +30,11 @@ button.btn.btn-link, .chev i{
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
-    margin:0 auto;
 }
 
-.nav{
-  display:block;/*make the nav stack*/
-}
-#homeicon{
-  padding:.75em .75em .75em 0;
-  margin-right:1em;
-}
-.navtab{
-  background-color:#00a3ff;
-  height:45px;
-  padding:.75em .75em .5em 1.75em;
-  margin-right:1em;
-  border-radius:0 7px 7px 0;
-}
-.control{/*style the volume control this would probably be better done with bootstrap container*/
-  background-color:#00a3ff;
-  /*padding:.75em .5em .75em 1.5em;*/
+.control, i{/*style the volume control this would probably be better done with bootstrap container*/
   color:#fff;
-  /*width:330px;*/
-  border-radius:7px 0 0 7px;
- }
-.nav a{
-  margin:1em 1em 1em 0;
-  display:block;/*make the nav stack*/
-}
-header.container-fluid{
-  padding:0;
 }
 i{
-  color:#fff;
   font-size:25px;
 }
-  header img{
-  width:35px;
-  height:35px;
-  }
-  .container-fluid .row{
-    width:100%;
-    padding:1em 0 0 1em;
-  }

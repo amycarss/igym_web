@@ -15,21 +15,23 @@
 </head>
 <body>
   <header>
-    <div class="container-fluid navbar flex-md-nowrap pl-10 pr-10 shadow">
-             <a href="igym2.0.html"><span id=homeicon><i class="fas fa-home"></i></span></a>
-            <p class="identity">iGym</p>
+    <div class="container-fluid navbar flex-md-nowrap py-0 px-10 shadow">
+        <div class="row">
+             <a href="igym2.0.html"><span id=homeicon class="col-sm-2"><i class="fas fa-home my-3"></i></span></a>
+            <p class="identity m-auto">iGym</p>
+        </div>
         </div>
 
-    <div class="row justify-content-between">
-        <nav class="nav col-xsm-5"><!--navigation buttons-->
-            <a href="setting.html"><span class="navtab shadow-sm"><i class="fas fa-cog"></i></span>Settings</a>
-            <a href="saved.html"><span class="navtab shadow-sm"><i class="fas fa-redo-alt"></i></span>Saved Games</a>
-            <a href="video.html"><span class="navtab shadow-sm"><i class="fas fa-video"></i></span>Video</a>
-            <a href="developer.html"><span class="navtab shadow-sm"><i class="fas fa-code"></i></span>Developer</a>
+    <div class="row justify-content-between mt-3">
+        <nav class="nav col-xsm-5 d-block"><!--navigation buttons-->
+           <a href="setting.html" class="mr-3 px-3 d-block rounded-right"><span class="navtab pr-3 align-middle"><i class="fas fa-cog pr-1 pl-3 py-1 rounded-right"></i></span>Settings</a>
+            <a href="saved.html" class="mr-3 px-3 d-block rounded-right"><span class="navtab pr-3 align-middle"><i class="fas fa-redo-alt pr-1 pl-3 py-1 rounded-right"></i></span>Saved Games</a>
+            <a href="video.html" class="mr-3 px-3 d-block rounded-right"><span class="navtab pr-3 align-middle"><i class="fas fa-video pr-1 pl-3 py-1 rounded-right"></i></span>Video</a>
+            <a href="developer.html" class="mr-3 px-3 d-block rounded-right"><span class="navtab pr-3 align-middle"><i class="fas fa-code pr-1 pl-3 py-1 rounded-right"></i></span>Developer</a>
         </nav>       
-      
+   
         <div class="slidecontainer col-sm-auto"><!--add volume control-->
-            <p class="control mt-3 shadow-sm">Volume&nbsp;&nbsp;<i class="fas fa-volume-off"></i><input type="range" min="1" max="100" value="50" class="slider" id="myRange"><i class="fas fa-volume-up"></i></p>
+            <div class="control ml-3 shadow-sm pl-3 rounded-left"><label class="align-middle my-2">Volume&nbsp;&nbsp;</label><span class="slide align-middle"><i class="fas fa-volume-off mx-1"></i><input type="range" min="1" max="100" value="50" class="slider my-0 mx-3" id="myRange"><i class="fas fa-volume-up mx-1 pr-3"></i></span></div>
         </div>  
     </div>
 
@@ -38,15 +40,16 @@
       <div class="container"><!--container for entire accordion-->
         <h2>Settings</h2>
         <div class="accordion" id="settings" role="navigation">
-          <div class="card"> <!--this is the kick button settings-->
-            <div class="card-header" id="kick">
-            
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <span class="chev"><i class="fas fa-angle-right"></i></span>  Kick Button
+         
+          <div class="card mb-2"> <!--this is the kick button settings-->
+            <div class="card-header p-0" id="kick">
+              
+                <button class="btn btn-link py-2 text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                     <span class="chev px-2"><i class="fas fa-angle-right mr-2"></i>Kick Button</span> 
                 </button>
-               
+              
             </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="kick" data-parent="#settings">
+            <div id="collapseOne" class="collapse mb-2" aria-labelledby="kick" data-parent="#settings">
               <!--kick button controls-->
               <div class="card-body">
                 <div class="container">
@@ -105,12 +108,13 @@
               </div><!--end kick button params-->
             </div><!--end.card-body-->
           </div><!--end.card-->
+        
           <!--Court controls-->
-          <div class="card"><!--this is the court settings-->
-          <div class="card-header" id="court">  
+          <div class="card mb-2"><!--this is the court settings-->
+          <div class="card-header p-0" id="court">  
             
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="chev"><i class="fas fa-angle-right"></i></span>  Court
+                <button class="btn btn-link py-2 text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span class="chev px-2"><i class="fas fa-angle-right mr-2"></i>Court</span>
                 </button>
             
             </div>
@@ -170,11 +174,11 @@
             </div><!--end.card-body-->
           </div><!--end.card-->
           <!--begin sound controls-->
-          <div class="card"><!--this is the sound controls-->
-            <div class="card-header" id="sound">
+          <div class="card mb-2"><!--this is the sound controls-->
+            <div class="card-header p-0" id="sound">
             
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span class="chev"><i class="fas fa-angle-right"></i></span>Sound
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class="chev px-2 align-middle"><i class="fas fa-angle-right mr-2"></i>Sound</span>
                 </button>
             
             </div>
@@ -280,17 +284,16 @@
               </div><!--end sound params-->
             </div><!--end#collapseThree-->
           </div><!--end.card-->
-          <div class="card"><!--begin video card-->
-            <div class="card-header" id="video">
-              <p>Video<p>
-              <div class="custom-control custom-switch form-group d-inline">
-                <input type="checkbox" class="custom-control-input" id="customSwitchVid">
-                <label class="custom-control-label" for="customSwitchVid">Enable Recording</label>
+          <div class="card mb-2 px-3"><!--begin video card-->
+            <div class="card-header row justify-content-between pb-0" id="video">
+              <p class="d-inline col-xs-2 pl-4">Video</p>
+              <div class="custom-control custom-switch form-group d-inline col-xs-2">
+                <input type="checkbox" class="custom-control-input" id="customSwitchVid"><label class="custom-control-label" for="customSwitchVid">Enable Recording</label> 
               </div><!--end the video toggle div-->
           </div><!--end #video-->
           </div>
-        <div class="container d-flex justify-content-around mt-2 mb-2">
-            <button id="save" class="btn btn-primary">Save Game Settings</button><!--option to save settings would open a dialogue and prompt for name-->
+        <div class="container d-flex justify-content-around my-2">
+            <button id="save" class="btn btn-primary mt-4">Save Game Settings</button><!--option to save settings would open a dialogue and prompt for name-->
       
         </div><!--end of .accordion-->
         </div><!--end .container-->  
