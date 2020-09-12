@@ -130,50 +130,48 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="court" data-parent="#settings">
               <div class="card-body">
-                <div class="container">
+                <div class="container" id="courtSettings">
                  <!--the stuff that goes inside the accordion goes here-->
                  <div class="row">
-                   <div class="col">
+                   <div class="col d-flex flex-row">
                     <h4>Court 1</h4>
                    </div>
-                   <div class="col">
-                     
-                  </div>
-                  <div class="col">
+                   
+                  <div class="col d-flex flex-row-reverse">
                     <h4>Court 2</h4> 
                   </div>
                  </div>
                  <form>
                   <div class="container">
-                  <div class="row form-group">           
-                    <div class="col-3"><input class="form-control-sm" type="number" id="ball-speed-max1" name="ball-speed-max1" value="3" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between">           
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="ball-speed-max1" name="ball-speed-max1" value="3" min="0" max="10" step="1"></div>
                     <div class="col-4"><label for="ball-speed-max">Ball Speed Max (1-10)</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="ball-speed-max2" name="ball-speed-max2" value="3" min="0" max="10" step="1"></div>
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="ball-speed-max2" name="ball-speed-max2" value="3" min="0" max="10" step="1"></div>
                   </div> 
-                  <div class="row form-group">  
-                    <div class="col-3"><input class="form-control-sm" type="number" id="goal-size1" name="goal-size1" value="3" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between">  
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="goal-size1" name="goal-size1" value="3" min="0" max="10" step="1"></div>
                     <div class="col-4"><label for="goal-size">Goal Size (1-5)</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="goal-size2" name="goal-size2" value="3" min="0" max="10" step="1"></div>
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="goal-size2" name="goal-size2" value="3" min="0" max="10" step="1"></div>
                   </div> 
-                  <div class="row form-group"> 
-                    <div class="col-3"><input class="form-control-sm" type="number" id="friction1" name="friction1" value="3" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between"> 
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="friction1" name="friction1" value="3" min="0" max="10" step="1"></div>
                     <div class="col-4"><label for="friction">Friction (seconds)</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="friction2" name="friction2" value="3" min="0" max="10" step="1"></div>
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="friction2" name="friction2" value="3" min="0" max="10" step="1"></div>
                   </div>
-                  <div class="row form-group">
-                    <div class="col-3"><input class="form-control-sm" type="number" id="boundary-elasticity1" value="3" name="boundary-elasticity1" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between">
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="boundary-elasticity1" value="3" name="boundary-elasticity1" min="0" max="10" step="1"></div>
                     <div class="col-4"><label for="boundary-elasticity">Boundary Elasticity</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="boundary-elasticity2" value="3" name="boundary-elasticity2" min="0" max="10" step="1"></div>
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="boundary-elasticity2" value="3" name="boundary-elasticity2" min="0" max="10" step="1"></div>
                   </div>
-                  <div class="row form-group"> 
-                    <div class="col-3"><input class="form-control-sm" type="number" id="circle-elasticity1" value="3" name="circle-elasticity1" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between"> 
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="circle-elasticity1" value="3" name="circle-elasticity1" min="0" max="10" step="1"></div>
                     <div class="col-4"><label for="circle-elasticity">Circle Elasticity (1-10)</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="circle-elasticity2" value="3" name="circle-elasticity2" min="0" max="10" step="1"></div>
+                    <div class="col-4 col-md-3"><input class="form-control-sm" type="number" id="circle-elasticity2" value="3" name="circle-elasticity2" min="0" max="10" step="1"></div>
                   </div>
-                  <div class="row form-group">
-                    <div class="col-3"><input class="form-control-sm" type="number" id="circle-coefficient1" value="3" name="circle-coefficient1" min="0" max="10" step="1"></div> 
-                    <div class="col-4"><label for="circle-coefficient">Circle Coefficient(1-10)</label></div>
-                    <div class="col-3"><input class="form-control-sm" type="number" id="circle-coefficient2" value="3" name="circle-coefficient2" min="0" max="10" step="1"></div>
+                  <div class="row form-group d-flex flex-row justify-content-between">
+                    <div class="col-4 col-md-3"><input class="form-control" type="number" id="circle-coefficient1" value="3" name="circle-coefficient1" min="0" max="10" step="1"></div> 
+                    <div class="col-4"><label for="circle-coefficient">Circle Coefficient (1-10)</label></div>
+                    <div class="col-4 col-md-3"><input class="form-control" type="number" id="circle-coefficient2" value="3" name="circle-coefficient2" min="0" max="10" step="1"></div>
                   </div>
                 </div><!--container-->
               </form>
