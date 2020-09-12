@@ -12,6 +12,16 @@
     <!-- down chevron <i class="fas fa-chevron-down"></i>-->
     <!--right chevron <i class="fas fa-angle-right"></i>-->
     <!--using Bootstrap input spinner https://shaack.com/projekte/bootstrap-input-spinner/-->
+    <style>
+      [data-toggle="collapse"][aria-expanded="true"] > .js-rotate-if-collapsed
+      {
+          -webkit-transform: rotate(90deg);
+          -moz-transform:    rotate(90deg);
+          -ms-transform:     rotate(90deg);
+          -o-transform:      rotate(90deg);
+          transform:         rotate(90deg);
+      }
+  </style>
 </head>
 <body>
   <header>
@@ -51,60 +61,60 @@
             </div>
             <div id="collapseOne" class="collapse mb-2" aria-labelledby="kick" data-parent="#settings">
               <!--kick button controls-->
-              <div class="card-body">
+              <div class="card-body container">
                 <div class="container">
                  <!--the stuff that goes inside the accordion goes here-->
-                 <form>
+                 <form class="kickSettings">
                   <div class="row form-group">
-                    <div class="col-3">
+                    <div class="col-5">
                       <label for="player-name-1">Player Name</label>
                     </div>
-                    <div class="col-4">
-                      <input class="form-control form-control-sm" type="text" id="player-name-1" name="player-name">
+                    <div class="col-7 col-md-5">
+                      <input class="form-control" type="text" id="player-name-1" name="player-name">
                     </div>
                    
                   </div>
   
                   <div class="row form-group">
-                    <div class="col-5">
+                    <div class="col-5 col-md-7">
                       <label for="circle-size-1">Circle Expansion Size (1-10)</label>
                     </div>
-                    <div class="col-3">
-                      <input class="form-control form-control-sm" type="number" id="circle-size-1" value="3" name="circle-size" step="1">
+                    <div class="col-7 col-sm-3">
+                      <input class="form-control" type="number" id="circle-size-1" value="3" name="circle-size" step="1">
                     </div>
                   </div>
   
                   <div class="row form-group">
-                    <div class="col-5">
+                    <div class="col-5 col-md-7">
                       <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-7 col-sm-3">
                       <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-1" name="circle-speed" step="1">
                     </div>
                   </div>
   
                   <div class="row form-group">
-                    <div class="col-5">
+                    <div class="col-5 col-md-7">
                       <label for="hold-seconds-1">Hold time (seconds)</label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-7 col-sm-3">
                       <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
                     </div>
                   </div>
           
                
-                <div class="mb-5 form-group">
-                  <input type="checkbox" id="check1">
-                  <label for="check1">Set up another kick button with these settings</label>
+                <div class="mb-5 form-group row">
+                  <input type="checkbox" id="check1" class="col-1">
+                  <label for="check1" class="col">Set up another kick button with these settings</label><!--selecting this checkbox would generate another iteration of the form.kickSettings with values duplicating what's been entered -->
                 </div>  
                 <div class="row d-flex justify-content-between form-group">
                  
                   <div>
-                    <input class="btn btn-primary" type="submit" value="Add More" aria-label="add more players button">
+                    <input class="btn btn-primary" type="submit" value="Add another Kick Button" aria-label="add more players button">
                   </div>
                   </div>
                 </form>
-                </div><!--end container-->
+               </div> <!--end container-->
               </div><!--end kick button params-->
             </div><!--end.card-body-->
           </div><!--end.card-->
