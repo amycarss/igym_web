@@ -36,22 +36,24 @@
 </header>
 
   <main class="p3">
-    <div class="container">
-        <h2>Load a Saved Game</h2>
+    <div>
+        <h2 class="text-center my-3">Load a Saved Game</h2>
         <form id="selectSaved">
             <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xsm">
                     <select class="custom-select custom-select-md mb-3">
                         <option selected>Select Saved Game</option>
-                        <option id="soccerHockey">Play with James Ashley Jacob</option>
-                        <option id="pacman">Roland's favorite</option>
-                        <option id="soccerPower">Krebs bros special</option>
-                        <option id="euchre">Betsy's challenge</option>  
+                        <option id="Play_with_James_Ashley_Jacob">Play with James Ashley Jacob</option>
+                        <option id="Rolands_favorite">Roland's favorite</option>
+                        <option id="Krebs_Bros_Special">Krebs bros special</option>
+                        <option id="Betsys_challenge">Betsy's challenge</option>  
                     </select><!--on selection, system loads parameters associated with the selected game-->
-            </div>
+                </div>
+              </div>
+              </div>
         </form>
-        <h2>Kick Button Settings</h2><!--saved parameters display below-->
+        <h3 class="text-center my-5">Kick Button Settings</h3><!--saved parameters display below-->
         <div class="container" id="savedParams">
             <h3 class="title">Play with James Ashley Jacob</h3>
             <form id="savedKickParams">
@@ -59,32 +61,32 @@
                     <p>Game type:<span>Multiplayer Soccer</span></p>
                     <p>Kick Button player:<span>James</span></p>
             </div>
-                <div class="row form-group">
-                  <div class="col-5">
-                    <label for="circle-size-1">Circle Expansion Size (1-10)</label>
-                  </div>
-                  <div class="col-3">
-                    <input class="form-control form-control-sm" type="number" id="circle-size-1" value="3" name="circle-size" step="1">
-                  </div>
-                </div>
+            <div class="row form-group">
+              <div class="col-5 col-md-7">
+                <label for="circle-size-1">Circle Expansion Size (1-10)</label>
+              </div>
+              <div class="col-7 col-sm-3">
+                <input class="form-control" type="number" id="circle-size-1" value="3" name="circle-size" step="1">
+              </div>
+            </div>
 
-                <div class="row form-group">
-                  <div class="col-5">
-                    <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
-                  </div>
-                  <div class="col-3">
-                    <input class="form-control form-control-sm" type="number" value="5" id="circle-speed-1" name="circle-speed" step="1">
-                  </div>
-                </div>
+            <div class="row form-group">
+              <div class="col-5 col-md-7">
+                <label for="circle-speed-1">Circle Expansion Speed (1-10)</label>
+              </div>
+              <div class="col-7 col-sm-3">
+                <input class="form-control form-control-sm" type="number" value="3" id="circle-speed-1" name="circle-speed" step="1">
+              </div>
+            </div>
 
-                <div class="row form-group">
-                  <div class="col-5">
-                    <label for="hold-seconds-1">Hold time (seconds)</label>
-                  </div>
-                  <div class="col-3">
-                    <input class="form-control form-control-sm" type="number" value="2.5" id="hold-seconds-1" name="hold-seconds" step=".5">
-                  </div>
-                </div>
+            <div class="row form-group">
+              <div class="col-5 col-md-7">
+                <label for="hold-seconds-1">Hold time (seconds)</label>
+              </div>
+              <div class="col-7 col-sm-3">
+                <input class="form-control form-control-sm" type="number" value="3" id="hold-seconds-1" name="hold-seconds" step=".5">
+              </div>
+            </div> 
              </form>
 
       
@@ -97,5 +99,9 @@ integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9&#43;4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./js/bootstrap-input-spinner.js"></script>
+<script>
+  $("input[type='number']").inputSpinner()
+</script>
 </body>
 </html>
